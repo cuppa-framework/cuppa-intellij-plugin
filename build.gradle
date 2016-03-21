@@ -1,0 +1,35 @@
+plugins {
+    id "org.jetbrains.intellij" version "0.0.43"
+}
+
+group = 'org.forgerock.cuppa'
+version = '1.0.0'
+
+apply plugin: 'maven'
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'org.jetbrains.intellij'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  checkstyle 'com.puppycrawl.tools:checkstyle:6.15'
+}
+
+checkstyle {
+  configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
+  configProperties['samedir'] = new File(rootDir, "config/checkstyle")
+}
+
+intellij {
+    version '2016.1'
+    pluginName 'Cuppa'
+}
+
