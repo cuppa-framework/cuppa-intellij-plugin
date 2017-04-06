@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.intellij" version "0.0.43"
+    id 'org.jetbrains.intellij' version '0.2.7'
 }
 
 group = 'org.forgerock.cuppa'
@@ -29,7 +29,7 @@ checkstyle {
 }
 
 intellij {
-    version '2016.1'
+    version '2017.1'
     pluginName 'Cuppa'
 }
 
