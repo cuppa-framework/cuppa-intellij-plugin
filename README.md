@@ -31,7 +31,7 @@ $ ./gradlew build
 
 Run `./gradlew tasks` to see a list of all available tasks.
 
-We use the `intellij` Gradle plugin to bundle and run the plugin in IDEA using the `buildPlugin` and `runIdea` tasks,
+We use the `intellij` Gradle plugin to bundle and run the plugin in IDEA using the `buildPlugin` and `runIde` tasks,
 respectively.
 
 ## License
